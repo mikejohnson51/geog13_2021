@@ -1,0 +1,31 @@
+---
+title: "&nbsp;"
+---
+
+<center>
+![](img/ucsb-navy-white.png)
+
+# Welcome to Geography 13
+## Summer Session A
+
+</center>
+  
+Geography 13 is a course taught by UCSB Geography intended to teach the fundamentals of GIS and spatial data science. 
+
+<br><br><br>
+
+```{r, echo = FALSE}
+library(icon)
+```
+
+#### `r fa("globe", color = "navy")` **Mike Johnson** [repo](https://github.com/mikejohnson51/mikejohnson51.github.io) --- [webpage](http://mikejohnson51.github.io)
+  - `r fa("user")` Instructor
+  - `r fa("university")` Water Resources
+  - `r fa("map-marker")` 34.41, -119.84
+  
+#### `r fa("traffic-light", color = "red")` **Jiwon Baik** [repo]() --- [webpage]()
+  - `r fa("user")` Teaching Assistant
+  - `r fa("university")` 
+  - `r fa("map-marker")` 35.9, 127.7
+
+

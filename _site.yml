@@ -1,0 +1,10 @@
+name: "Geography 176A 2020"
+output_dir: "."
+navbar:
+  title: "People"
+  right:
+    - icon: fa-globe fa-lg
+      href: https://github.com/mikejohnson51/spds
+output:
+  html_document:
+    theme: flatly
