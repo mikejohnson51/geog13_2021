@@ -28,7 +28,7 @@ library(icon)
   - `r fa("university")` 
   - `r fa("map-marker")` 35.9, 127.7
 
-#### `r fa("global", color = "blue")` **Chi Zhang** [repo](https://github.com/NeedCola/geog13_2021) --- [webpage](https://needcola.github.io/)
+#### `r fa("globe", color = "blue")` **Chi Zhang** [repo](https://github.com/NeedCola/geog13_2021) --- [webpage](https://needcola.github.io/)
   - `r fa("user")` GIS 2022 Student
   - `r fa("university")` GIS
   - `r fa("map-marker")` 31.86, 117.27
