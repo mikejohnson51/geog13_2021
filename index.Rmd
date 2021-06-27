@@ -14,21 +14,21 @@ Geography 13 is a course taught by UCSB Geography intended to teach the fundamen
 
 <br><br><br>
 
-```{r, echo = FALSE}
-library(icon)
+```{r, echo = FALSE, message=FALSE, warning=FALSE}
+library(icons)
 ```
 
-#### `r fa("globe", color = "navy")` **Mike Johnson** [repo](https://github.com/mikejohnson51/mikejohnson51.github.io) --- [webpage](http://mikejohnson51.github.io)
-  - `r fa("user")` Instructor
-  - `r fa("university")` Water Resources
-  - `r fa("map-marker")` 34.41, -119.84
+#### `r icon_style(fontawesome("globe"), fill = "navy")` **Mike Johnson** [repo](https://github.com/mikejohnson51/mikejohnson51.github.io) --- [webpage](http://mikejohnson51.github.io)
+  - `r fontawesome("user", style = "solid")` Instructor
+  - `r fontawesome("university")` Water Resources
+  - `r fontawesome("map-marker")` 34.41, -119.84
   
-#### `r fa("traffic-light", color = "red")` **Jiwon Baik** [repo]() --- [webpage]()
-  - `r fa("user")` Teaching Assistant
-  - `r fa("university")` 
-  - `r fa("map-marker")` 35.9, 127.7
+#### `r icon_style(fontawesome("traffic-light"), fill = "red")` **Jiwon Baik** [repo]() --- [webpage]()
+  - `r fontawesome("user", style = "solid")` Teaching Assistant
+  - `r fontawesome("university")` 
+  - `r fontawesome("map-marker")` 35.9, 127.7
 
-#### `r fa("globe", color = "blue")` **Chi Zhang** [repo](https://github.com/NeedCola/geog13_2021) --- [webpage](https://needcola.github.io/)
-  - `r fa("user")` GIS 2022 Student
-  - `r fa("university")` GIS
-  - `r fa("map-marker")` 31.86, 117.27
+#### `r icon_style(fontawesome("globe"), fill = "blue")` **Chi Zhang** [repo](https://github.com/NeedCola/geog13_2021) --- [webpage](https://needcola.github.io/)
+  - `r fontawesome("user", style = "solid")` GIS 2022 Student
+  - `r fontawesome("university")` GIS
+  - `r fontawesome("map-marker")` 31.86, 117.27
