@@ -1,5 +1,5 @@
 ---
-title: "&nbsp;"
+title: '&nbsp;'
 ---
 
 <center>
@@ -32,3 +32,8 @@ library(icons)
   - `r fontawesome("user", style = "solid")` GIS 2022 Student
   - `r fontawesome("university")` GIS
   - `r fontawesome("map-marker")` 31.86, 117.27
+  
+#### `r icon_style(fontawesome("circle"), fill = "tan")` __Abby Vandenberg__ [repo](https://github.com/abbyvandenberg/abbyvandenberg.github.io) --- [webpage](https://abbyvandenberg.github.io/index.html)
+  - `r fontawesome("user", style = "solid")` Physical Geography & Ocean Science 2022
+  - `r fontawesome("university")` Offshore Wind Energy
+  - `r fontawesome("map-marker")` 34.43, -119.57
