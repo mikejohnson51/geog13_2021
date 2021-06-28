@@ -37,3 +37,9 @@ library(icons)
   - `r fontawesome("user", style = "solid")` Physical Geography & Ocean Science 2022
   - `r fontawesome("university")` Offshore Wind Energy
   - `r fontawesome("map-marker")` 34.43, -119.57
+
+#### `r icon_style(fontawesome("exclamation-triangle"), fill = "gold")` **Hannah Malak** [repo](https://github.com/hannahmalak/hannahmalak.github.io) --- [webpage](https://hannahmalak.github.io/)
+  - `r fontawesome("user", style = "solid")` Geography (GIS) '23
+  - `r fontawesome("university")` Health Geography
+  - `r fontawesome("map-marker")` 34.41, -119.86
+  
