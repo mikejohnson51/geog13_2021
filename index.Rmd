@@ -52,3 +52,16 @@ library(icons)
   - `r fontawesome("user", style = "solid")` Geography (GIS) '22
   - `r fontawesome("university")` Climate & Hazards Geography
   - `r fontawesome("map-marker")` 34.41, -119.86
+
+
+#### `r icon_style(fontawesome("pagelines"), fill= "darkgreen")` **Piper Lovegreen**
+[repo](https://piper-lovegreen.github.io/)
+  - `r fontawesome("user", style = "solid")` Senior in Physical Geography 
+  - `r fontawesome("university")` Blue Carbon
+  - `r fontawesome("map-marker")` 34.39, -119.70
+
+#### `r icon_style(fontawesome("globe"), fill = "green")` **Lauren Whightsil** [repo](https://github.com/laurenwhightsil/laurenwhightsil) --- [webpage](https://laurenwhightsil.github.io/laurenwhightsil/)
+  - `r fontawesome("user", style = "solid")` Senior 
+  - `r fontawesome("university")` GIS
+  - `r fontawesome("map-marker")` 34.11, -117.59
+
