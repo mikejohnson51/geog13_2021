@@ -46,6 +46,13 @@ library(icons)
   - `r fontawesome("university")` Health Geography
   - `r fontawesome("map-marker")` 34.41, -119.86
   
+
+#### `r icon_style(fontawesome("grav"), fill = "black")` **Jason Allen** [repo](https://github.com/jcallen1995) ---
+[webpage](https://jcallen1995.github.io/)
+  - `r fontawesome("user", style = "solid")` Geography Student
+  - `r fontawesome("university")` Physics/GIS
+  - `r fontawesome("map-marker")` 34.41, -119.86
+
 #### `r icon_style(fontawesome("globe"), fill = "purple")` **Anisah Calvin Cuevas** [repo](https://github.com/Acuevas917/acuevas917.github.io) --- [webpage](https://acuevas917.github.io/)
   - `r fontawesome("user", style = "solid")` Geography (GIS) '21
   - `r fontawesome("university")` Health Geography & Urban Planning
@@ -75,3 +82,4 @@ library(icons)
   - `r fontawesome("user", style = "solid")` Senior 
   - `r fontawesome("university")` GIS
   - `r fontawesome("map-marker")` 34.11, -117.59
+
