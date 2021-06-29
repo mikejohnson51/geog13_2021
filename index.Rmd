@@ -51,4 +51,4 @@ library(icons)
   #### `r icon_style(fontawesome("globe"), fill = "Blue")` **Barush Martinez** [repo](https://github.com/Barush24/github.io) --- [webpage](https://barush24.github.io/github.io//)
   - `r fontawesome("user", style = "solid")` Geography (GIS) '21
   - `r fontawesome("university")` Data Science 
-  - `r fontawesome("map-marker")` 32.71, -117.16
+  - `r fontawesome("map-marker")` 32.72, -117.16
