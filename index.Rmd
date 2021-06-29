@@ -47,3 +47,8 @@ library(icons)
   - `r fontawesome("user", style = "solid")` Geography (GIS) '21
   - `r fontawesome("university")` Health Geography & Urban Planning
   - `r fontawesome("map-marker")` 34.41, -119.86
+  
+  #### `r icon_style(fontawesome("globe"), fill = "Blue")` **Barush Martinez** [repo](https://github.com/Barush24/github.io) --- [webpage](https://barush24.github.io/github.io//)
+  - `r fontawesome("user", style = "solid")` Geography (GIS) '21
+  - `r fontawesome("university")` Data Science 
+  - `r fontawesome("map-marker")` 32.71, -117.16
