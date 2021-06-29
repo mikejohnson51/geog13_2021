@@ -14,9 +14,12 @@ Geography 13 is a course taught by UCSB Geography intended to teach the fundamen
 
 <br><br><br>
 
+
+
 ```{r, echo = FALSE, message=FALSE, warning=FALSE}
 library(icons)
 ```
+
 
 #### `r icon_style(fontawesome("globe"), fill = "navy")` **Mike Johnson** [repo](https://github.com/mikejohnson51/mikejohnson51.github.io) --- [webpage](http://mikejohnson51.github.io)
   - `r fontawesome("user", style = "solid")` Instructor
@@ -43,8 +46,40 @@ library(icons)
   - `r fontawesome("university")` Health Geography
   - `r fontawesome("map-marker")` 34.41, -119.86
   
+
 #### `r icon_style(fontawesome("grav"), fill = "black")` **Jason Allen** [repo](https://github.com/jcallen1995) ---
 [webpage](https://jcallen1995.github.io/)
   - `r fontawesome("user", style = "solid")` Geography Student
   - `r fontawesome("university")` Physics/GIS
   - `r fontawesome("map-marker")` 34.41, -119.86
+
+#### `r icon_style(fontawesome("globe"), fill = "purple")` **Anisah Calvin Cuevas** [repo](https://github.com/Acuevas917/acuevas917.github.io) --- [webpage](https://acuevas917.github.io/)
+  - `r fontawesome("user", style = "solid")` Geography (GIS) '21
+  - `r fontawesome("university")` Health Geography & Urban Planning
+  - `r fontawesome("map-marker")` 34.41, -119.86
+  
+#### `r icon_style(fontawesome("globe"), fill = "Blue")` **Barush Martinez** [repo](https://github.com/Barush24/github.io) --- [webpage](https://barush24.github.io/github.io//)
+  - `r fontawesome("user", style = "solid")` Geography (GIS) '21
+  - `r fontawesome("university")` Data Science 
+  - `r fontawesome("map-marker")` 32.72, -117.16
+
+#### `r icon_style(fontawesome("heart"), fill = "pink")` **Xochitl Medina** [repo](https://github.com/xochitlmedina/xochitlmedina) --- [webpage](https://xochitlmedina.github.io/xochitlmedina/index.html)
+  - `r fontawesome("user", style = "solid")` Geography (GIS Emphasis) '22
+  - `r fontawesome("university")` Environmental Studies
+  - `r fontawesome("map-marker")` 37.95, -121.29
+
+#### `r icon_style(fontawesome("compass"), fill = "blue")` **Oceane Roux** [repo](https://github.com/oceanerouxx/github.io.git) --- [webpage](https://oceanerouxx.github.io/github.io/)
+  - `r fontawesome("user", style = "solid")` Geography (GIS) '22
+  - `r fontawesome("university")` Climate & Hazards Geography
+  - `r fontawesome("map-marker")` 34.41, -119.86
+
+#### `r icon_style(fontawesome("pagelines"), fill= "darkgreen")` **Piper Lovegreen** [repo](https://github.com/piper-lovegreen/piper-lovegreen.github.io) --- [webpage](https://piper-lovegreen.github.io/)
+  - `r fontawesome("user", style = "solid")` Senior in Physical Geography 
+  - `r fontawesome("university")` Blue Carbon
+  - `r fontawesome("map-marker")` 34.39, -119.70
+
+#### `r icon_style(fontawesome("globe"), fill = "green")` **Lauren Whightsil** [repo](https://github.com/laurenwhightsil/laurenwhightsil) --- [webpage](https://laurenwhightsil.github.io/laurenwhightsil/)
+  - `r fontawesome("user", style = "solid")` Senior 
+  - `r fontawesome("university")` GIS
+  - `r fontawesome("map-marker")` 34.11, -117.59
+
