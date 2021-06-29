@@ -51,7 +51,7 @@ library(icons)
   - `r fontawesome("university")` Health Geography & Urban Planning
   - `r fontawesome("map-marker")` 34.41, -119.86
   
-  #### `r icon_style(fontawesome("globe"), fill = "Blue")` **Barush Martinez** [repo](https://github.com/Barush24/github.io) --- [webpage](https://barush24.github.io/github.io//)
+#### `r icon_style(fontawesome("globe"), fill = "Blue")` **Barush Martinez** [repo](https://github.com/Barush24/github.io) --- [webpage](https://barush24.github.io/github.io//)
   - `r fontawesome("user", style = "solid")` Geography (GIS) '21
   - `r fontawesome("university")` Data Science 
   - `r fontawesome("map-marker")` 32.72, -117.16
@@ -66,8 +66,7 @@ library(icons)
   - `r fontawesome("university")` Climate & Hazards Geography
   - `r fontawesome("map-marker")` 34.41, -119.86
 
-#### `r icon_style(fontawesome("pagelines"), fill= "darkgreen")` **Piper Lovegreen**
-[repo](https://piper-lovegreen.github.io/)
+#### `r icon_style(fontawesome("pagelines"), fill= "darkgreen")` **Piper Lovegreen** [repo](https://github.com/piper-lovegreen/piper-lovegreen.github.io) --- [webpage](https://piper-lovegreen.github.io/)
   - `r fontawesome("user", style = "solid")` Senior in Physical Geography 
   - `r fontawesome("university")` Blue Carbon
   - `r fontawesome("map-marker")` 34.39, -119.70
