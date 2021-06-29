@@ -14,9 +14,12 @@ Geography 13 is a course taught by UCSB Geography intended to teach the fundamen
 
 <br><br><br>
 
+
+
 ```{r, echo = FALSE, message=FALSE, warning=FALSE}
 library(icons)
 ```
+
 
 #### `r icon_style(fontawesome("globe"), fill = "navy")` **Mike Johnson** [repo](https://github.com/mikejohnson51/mikejohnson51.github.io) --- [webpage](http://mikejohnson51.github.io)
   - `r fontawesome("user", style = "solid")` Instructor
@@ -47,3 +50,10 @@ library(icons)
   - `r fontawesome("user", style = "solid")` Geography (GIS) '21
   - `r fontawesome("university")` Health Geography & Urban Planning
   - `r fontawesome("map-marker")` 34.41, -119.86
+
+#### `r icon_style(fontawesome("heart"), fill = "pink")` **Xochitl Medina** [repo](https://github.com/xochitlmedina/xochitlmedina) --- [webpage](https://xochitlmedina.github.io/xochitlmedina/index.html)
+  - `r fontawesome("user", style = "solid")` Geography (GIS Emphasis) '22
+  - `r fontawesome("university")` Environmental Studies
+  - `r fontawesome("map-marker")` 37.95, -121.29
+
+
