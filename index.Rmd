@@ -47,6 +47,11 @@ library(icons)
   - `r fontawesome("user", style = "solid")` Geography (GIS) '21
   - `r fontawesome("university")` Health Geography & Urban Planning
   - `r fontawesome("map-marker")` 34.41, -119.86
+  
+#### `r icon_style(fontawesome("compass"), fill = "blue")` **Oceane Roux** [repo](https://github.com/oceanerouxx/github.io.git) --- [webpage](https://oceanerouxx.github.io/github.io/)
+  - `r fontawesome("user", style = "solid")` Geography (GIS) '22
+  - `r fontawesome("university")` Climate & Hazards Geography
+  - `r fontawesome("map-marker")` 34.41, -119.86
 
 
 #### `r icon_style(fontawesome("pagelines"), fill= "darkgreen")` **Piper Lovegreen**
