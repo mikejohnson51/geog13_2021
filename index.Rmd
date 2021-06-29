@@ -50,7 +50,11 @@ library(icons)
   - `r fontawesome("user", style = "solid")` Geography (GIS) '21
   - `r fontawesome("university")` Health Geography & Urban Planning
   - `r fontawesome("map-marker")` 34.41, -119.86
-
+  
+  #### `r icon_style(fontawesome("globe"), fill = "Blue")` **Barush Martinez** [repo](https://github.com/Barush24/github.io) --- [webpage](https://barush24.github.io/github.io//)
+  - `r fontawesome("user", style = "solid")` Geography (GIS) '21
+  - `r fontawesome("university")` Data Science 
+  - `r fontawesome("map-marker")` 32.72, -117.16
 
 #### `r icon_style(fontawesome("heart"), fill = "pink")` **Xochitl Medina** [repo](https://github.com/xochitlmedina/xochitlmedina) --- [webpage](https://xochitlmedina.github.io/xochitlmedina/index.html)
   - `r fontawesome("user", style = "solid")` Geography (GIS Emphasis) '22
@@ -72,5 +76,3 @@ library(icons)
   - `r fontawesome("user", style = "solid")` Senior 
   - `r fontawesome("university")` GIS
   - `r fontawesome("map-marker")` 34.11, -117.59
-
-
