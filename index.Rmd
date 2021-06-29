@@ -43,3 +43,7 @@ library(icons)
   - `r fontawesome("university")` Health Geography
   - `r fontawesome("map-marker")` 34.41, -119.86
   
+#### `r icon_style(fontawesome("globe"), fill = "purple")` **Anisah Calvin Cuevas** [repo](https://github.com/Acuevas917/acuevas917.github.io) --- [webpage](file:///Users/anisah/github/acuevas917.github.io/index.html)
+  - `r fontawesome("user", style = "solid")` Geography (GIS) '21
+  - `r fontawesome("university")` Health Geography & Urban Planning
+  - `r fontawesome("map-marker")` 34.41, -119.86
