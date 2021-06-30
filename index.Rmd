@@ -7,9 +7,9 @@ title: 'lab 1 assignment'
 
 </center>
   
-#### <i class="fa fa-heart fa-1.5x" style="color:violet;"></i> **Rosemary Juarez** [repo](https://github.com/rosemaryjuarez?tab=repositories) --- [website](https://rosemaryjuarez.github.io/lab01example/)
+#### <i class="fa fa-street-view fa-1.5x" style="color:green;"></i> **Daniel Weinstein** [repo](https://github.com/danielweins/danielweins.github.io) --- [website](https://danielweins.github.io/index.html)
 
-- <i class="fa fa-user"></i> rising 3rd year, geography major w/ an emphasis in GIS
-- <i class="fa fa-university"></i> research on borders
+- <i class="fa fa-user"></i> 2nd Year, majoring in Geography with emphasis in GIS.  
+- <i class="fa fa-university"></i> Demography 
 
-- <i class="fa fa-map-marker"></i> 34.16º N, 119.18ºW
+- <i class="fa fa-map-marker"></i> 33.99ºN, -118.48ºW
