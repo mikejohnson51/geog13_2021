@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+<meta name="author" content="Mike Johnson" />
+
+
+<title>Daily Exercise 05</title>
+
+<script src="site_libs/header-attrs-2.9/header-attrs.js"></script>
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/flatly.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.tab('show');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">People</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="https://github.com/mikejohnson51/spds">
+    <span class="fa fa-globe fa-lg"></span>
+     
+  </a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+
+
+<h1 class="title toc-ignore">Daily Exercise 05</h1>
+<h4 class="author">Mike Johnson</h4>
+
+</div>
+
+
+<div id="covid-19-data" class="section level2">
+<h2>COVID-19 Data</h2>
+<div id="data" class="section level3">
+<h3>Data</h3>
+<p>We are going to practice some data wrangling skills using a real-world dataset about COVID cases curated and maintained by the New York Times. The data has been used to create reports and data visualizations like <a href="https://www.nytimes.com/interactive/2020/us/coronavirus-spread.html?referringSource=articleShare">this</a>, and are archived on a GitHub repo <a href="https://github.com/nytimes/covid-19-data">here</a>. Looking at the README in this repository we read:</p>
+<blockquote>
+<p>“We are providing two sets of data with cumulative counts of coronavirus cases and deaths: one with our most current numbers for each geography and another with historical data showing the tally for each day for each geography … the historical files are the final counts at the end of each day … The historical and live data are released in three files, one for each of these geographic levels: U.S., states and counties. A smaller file with only the most recent 30 days of data is also available” For this lab we will use the historic, recent, country level data which is stored as an updating CSV at this URL:</p>
+</blockquote>
+<pre class="r"><code>https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties-recent.csv</code></pre>
+</div>
+<div id="start" class="section level3">
+<h3>Start</h3>
+<p>I will get you started this week, in the following code chunk, I am attaching the tidyverse package; saving the NY-Times URL as a value called “url”; and I am reading that URL into an object called <code>covid</code></p>
+<pre class="r"><code>library(tidyverse)
+url = &#39;https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties-recent.csv&#39;
+covid = read_csv(url)
+head(covid, 5)</code></pre>
+<pre><code>## # A tibble: 5 x 6
+##   date       county  state   fips  cases deaths
+##   &lt;date&gt;     &lt;chr&gt;   &lt;chr&gt;   &lt;chr&gt; &lt;dbl&gt;  &lt;dbl&gt;
+## 1 2021-05-31 Autauga Alabama 01001  7142    110
+## 2 2021-05-31 Baldwin Alabama 01003 21620    311
+## 3 2021-05-31 Barbour Alabama 01005  2334     59
+## 4 2021-05-31 Bibb    Alabama 01007  2664     64
+## 5 2021-05-31 Blount  Alabama 01009  6864    139</code></pre>
+<p>Hint: You can print the top X rows of a <code>data.frame</code> with <code>slice</code>.</p>
+<pre class="r"><code>slice(covid, 1:5)</code></pre>
+<p>to print the top 5 columns of the raw covid <code>object</code></p>
+</div>
+</div>
+<div id="question-1" class="section level2">
+<h2>Question 1:</h2>
+<p>Use <code>dplyr</code> verbs to create a data.frame of the <strong>5</strong> counties with the most current cases. Remember, the cases and deaths are cumulative, so you only need to deal with the data for the most current (<code>max</code>) date.</p>
+<p>(<strong>Hint:</strong> <code>filter</code>, <code>arrange</code>, <code>slice</code>)</p>
+<pre class="r"><code>covid %&gt;%
+  filter(date == max(date)) %&gt;%
+  arrange(-cases) %&gt;%
+  select(county, state, cases) %&gt;%
+  head(5)</code></pre>
+<pre><code>## # A tibble: 5 x 3
+##   county        state        cases
+##   &lt;chr&gt;         &lt;chr&gt;        &lt;dbl&gt;
+## 1 Los Angeles   California 1250503
+## 2 New York City New York    955505
+## 3 Maricopa      Arizona     559688
+## 4 Cook          Illinois    556951
+## 5 Miami-Dade    Florida     501540</code></pre>
+</div>
+<div id="question-2" class="section level2">
+<h2>Question 2:</h2>
+<p>Use <code>dplyr</code> verbs to create a data.frame of the <strong>5</strong> states with the <em>most</em> cases current cases.</p>
+<p>(<strong>Hint:</strong> <code>filter</code>, <code>group_by</code>, <code>summarize</code>, <code>arrange</code>, <code>slice</code>)</p>
+<pre class="r"><code>covid %&gt;%
+  filter(date == max(date)) %&gt;%
+  group_by(state) %&gt;%
+  summarize(cases = sum(cases, na.rm = TRUE)) %&gt;%
+  ungroup() %&gt;%
+  slice_max(cases, n = 5)</code></pre>
+<pre><code>## # A tibble: 5 x 2
+##   state        cases
+##   &lt;chr&gt;        &lt;dbl&gt;
+## 1 California 3818219
+## 2 Texas      2991200
+## 3 Florida    2321929
+## 4 New York   2112872
+## 5 Illinois   1395442</code></pre>
+</div>
+<div id="question-3" class="section level2">
+<h2>Question 3:</h2>
+<p>Use the <code>dplyr</code> verbs to report the <strong>5</strong> counties with the <em>worst</em> current death/cases ratio: (e.g.<span class="math inline">\(100* (deaths/cases)\)</span>)</p>
+<p>(<strong>Hint:</strong> You will need to remove those where <code>cases == 0</code> and <code>county == Unknown</code>) (<strong>Hint:</strong> <code>filter</code>, <code>mutate</code>, <code>arrange</code>, <code>slice</code>)</p>
+<pre class="r"><code>covid %&gt;%
+  filter(date == max(date), county != &quot;Unknown&quot;, cases != 0) %&gt;%
+  mutate(ratio = 100*(deaths/cases)) %&gt;%
+  slice_max(ratio, n = 5)</code></pre>
+<pre><code>## # A tibble: 5 x 7
+##   date       county    state      fips  cases deaths ratio
+##   &lt;date&gt;     &lt;chr&gt;     &lt;chr&gt;      &lt;chr&gt; &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt;
+## 1 2021-06-29 Grant     Nebraska   31075    36      4 11.1 
+## 2 2021-06-29 Sabine    Texas      48403   525     45  8.57
+## 3 2021-06-29 Petroleum Montana    30069    12      1  8.33
+## 4 2021-06-29 Foard     Texas      48155   124     10  8.06
+## 5 2021-06-29 Harding   New Mexico 35021    13      1  7.69</code></pre>
+</div>
+<div id="question-4" class="section level2">
+<h2>Question 4:</h2>
+<p>Use the <code>dplyr</code> verbs to report the <strong>5</strong> states with the <em>worst</em> current death/case ratio.</p>
+<p>(<strong>Hint:</strong> <code>filter</code>, <code>group_by</code>, <code>summarize</code>, <code>mutate</code>, <code>arrange</code>, <code>slice</code>)</p>
+<pre class="r"><code>filter(covid, date == max(date)) %&gt;%
+  group_by(state) %&gt;%
+  summarize(totCases = sum(cases),
+            totDeaths = sum(deaths),
+            ratio = 100 * (totDeaths/totCases)) %&gt;%
+  ungroup() %&gt;%
+  slice_max(ratio, n = 5)</code></pre>
+<pre><code>## # A tibble: 5 x 4
+##   state                totCases totDeaths ratio
+##   &lt;chr&gt;                   &lt;dbl&gt;     &lt;dbl&gt; &lt;dbl&gt;
+## 1 New Jersey            1023200     26444  2.58
+## 2 Massachusetts          709873     17993  2.53
+## 3 New York              2112872     53093  2.51
+## 4 Connecticut            349301      8276  2.37
+## 5 District of Columbia    49347      1141  2.31</code></pre>
+</div>
+<div id="end" class="section level1">
+<h1>END</h1>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
