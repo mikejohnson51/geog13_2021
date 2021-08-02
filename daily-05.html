@@ -9,9 +9,10 @@
 <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
+<meta name="author" content="Mike Johnson" />
 
 
-<title>lab 1 assignment</title>
+<title>Daily Exercise 05</title>
 
 <script src="site_libs/header-attrs-2.9/header-attrs.js"></script>
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
@@ -261,22 +262,118 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">lab 1 assignment</h1>
+<h1 class="title toc-ignore">Daily Exercise 05</h1>
+<h4 class="author">Mike Johnson</h4>
 
 </div>
 
 
-<center>
-<p><img src="img/ucsb-navy-white.png" /></p>
-</center>
-<div id="daniel-weinstein-repo-website" class="section level4">
-<h4><i class="fa fa-street-view fa-1.5x" style="color:green;"></i> <strong>Daniel Weinstein</strong> <a href="https://github.com/danielweins/danielweins.github.io">repo</a> — <a href="https://danielweins.github.io/index.html">website</a></h4>
-<ul>
-<li><p><i class="fa fa-user"></i> 2nd Year, majoring in Geography with emphasis in GIS.<br />
-</p></li>
-<li><p><i class="fa fa-university"></i> Demography</p></li>
-<li><p><i class="fa fa-map-marker"></i> 33.99ºN, -118.48ºW</p></li>
-</ul>
+<div id="covid-19-data" class="section level2">
+<h2>COVID-19 Data</h2>
+<div id="data" class="section level3">
+<h3>Data</h3>
+<p>We are going to practice some data wrangling skills using a real-world dataset about COVID cases curated and maintained by the New York Times. The data has been used to create reports and data visualizations like <a href="https://www.nytimes.com/interactive/2020/us/coronavirus-spread.html?referringSource=articleShare">this</a>, and are archived on a GitHub repo <a href="https://github.com/nytimes/covid-19-data">here</a>. Looking at the README in this repository we read:</p>
+<blockquote>
+<p>“We are providing two sets of data with cumulative counts of coronavirus cases and deaths: one with our most current numbers for each geography and another with historical data showing the tally for each day for each geography … the historical files are the final counts at the end of each day … The historical and live data are released in three files, one for each of these geographic levels: U.S., states and counties. A smaller file with only the most recent 30 days of data is also available” For this lab we will use the historic, recent, country level data which is stored as an updating CSV at this URL:</p>
+</blockquote>
+<pre class="r"><code>https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties-recent.csv</code></pre>
+</div>
+<div id="start" class="section level3">
+<h3>Start</h3>
+<p>I will get you started this week, in the following code chunk, I am attaching the tidyverse package; saving the NY-Times URL as a value called “url”; and I am reading that URL into an object called <code>covid</code></p>
+<pre class="r"><code>library(tidyverse)
+url = &#39;https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties-recent.csv&#39;
+covid = read_csv(url)
+head(covid, 5)</code></pre>
+<pre><code>## # A tibble: 5 x 6
+##   date       county  state   fips  cases deaths
+##   &lt;date&gt;     &lt;chr&gt;   &lt;chr&gt;   &lt;chr&gt; &lt;dbl&gt;  &lt;dbl&gt;
+## 1 2021-05-31 Autauga Alabama 01001  7142    110
+## 2 2021-05-31 Baldwin Alabama 01003 21620    311
+## 3 2021-05-31 Barbour Alabama 01005  2334     59
+## 4 2021-05-31 Bibb    Alabama 01007  2664     64
+## 5 2021-05-31 Blount  Alabama 01009  6864    139</code></pre>
+<p>Hint: You can print the top X rows of a <code>data.frame</code> with <code>slice</code>.</p>
+<pre class="r"><code>slice(covid, 1:5)</code></pre>
+<p>to print the top 5 columns of the raw covid <code>object</code></p>
+</div>
+</div>
+<div id="question-1" class="section level2">
+<h2>Question 1:</h2>
+<p>Use <code>dplyr</code> verbs to create a data.frame of the <strong>5</strong> counties with the most current cases. Remember, the cases and deaths are cumulative, so you only need to deal with the data for the most current (<code>max</code>) date.</p>
+<p>(<strong>Hint:</strong> <code>filter</code>, <code>arrange</code>, <code>slice</code>)</p>
+<pre class="r"><code>covid %&gt;%
+  filter(date == max(date)) %&gt;%
+  arrange(-cases) %&gt;%
+  select(county, state, cases) %&gt;%
+  head(5)</code></pre>
+<pre><code>## # A tibble: 5 x 3
+##   county        state        cases
+##   &lt;chr&gt;         &lt;chr&gt;        &lt;dbl&gt;
+## 1 Los Angeles   California 1250503
+## 2 New York City New York    955505
+## 3 Maricopa      Arizona     559688
+## 4 Cook          Illinois    556951
+## 5 Miami-Dade    Florida     501540</code></pre>
+</div>
+<div id="question-2" class="section level2">
+<h2>Question 2:</h2>
+<p>Use <code>dplyr</code> verbs to create a data.frame of the <strong>5</strong> states with the <em>most</em> cases current cases.</p>
+<p>(<strong>Hint:</strong> <code>filter</code>, <code>group_by</code>, <code>summarize</code>, <code>arrange</code>, <code>slice</code>)</p>
+<pre class="r"><code>covid %&gt;%
+  filter(date == max(date)) %&gt;%
+  group_by(state) %&gt;%
+  summarize(cases = sum(cases, na.rm = TRUE)) %&gt;%
+  ungroup() %&gt;%
+  slice_max(cases, n = 5)</code></pre>
+<pre><code>## # A tibble: 5 x 2
+##   state        cases
+##   &lt;chr&gt;        &lt;dbl&gt;
+## 1 California 3818219
+## 2 Texas      2991200
+## 3 Florida    2321929
+## 4 New York   2112872
+## 5 Illinois   1395442</code></pre>
+</div>
+<div id="question-3" class="section level2">
+<h2>Question 3:</h2>
+<p>Use the <code>dplyr</code> verbs to report the <strong>5</strong> counties with the <em>worst</em> current death/cases ratio: (e.g.<span class="math inline">\(100* (deaths/cases)\)</span>)</p>
+<p>(<strong>Hint:</strong> You will need to remove those where <code>cases == 0</code> and <code>county == Unknown</code>) (<strong>Hint:</strong> <code>filter</code>, <code>mutate</code>, <code>arrange</code>, <code>slice</code>)</p>
+<pre class="r"><code>covid %&gt;%
+  filter(date == max(date), county != &quot;Unknown&quot;, cases != 0) %&gt;%
+  mutate(ratio = 100*(deaths/cases)) %&gt;%
+  slice_max(ratio, n = 5)</code></pre>
+<pre><code>## # A tibble: 5 x 7
+##   date       county    state      fips  cases deaths ratio
+##   &lt;date&gt;     &lt;chr&gt;     &lt;chr&gt;      &lt;chr&gt; &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt;
+## 1 2021-06-29 Grant     Nebraska   31075    36      4 11.1 
+## 2 2021-06-29 Sabine    Texas      48403   525     45  8.57
+## 3 2021-06-29 Petroleum Montana    30069    12      1  8.33
+## 4 2021-06-29 Foard     Texas      48155   124     10  8.06
+## 5 2021-06-29 Harding   New Mexico 35021    13      1  7.69</code></pre>
+</div>
+<div id="question-4" class="section level2">
+<h2>Question 4:</h2>
+<p>Use the <code>dplyr</code> verbs to report the <strong>5</strong> states with the <em>worst</em> current death/case ratio.</p>
+<p>(<strong>Hint:</strong> <code>filter</code>, <code>group_by</code>, <code>summarize</code>, <code>mutate</code>, <code>arrange</code>, <code>slice</code>)</p>
+<pre class="r"><code>filter(covid, date == max(date)) %&gt;%
+  group_by(state) %&gt;%
+  summarize(totCases = sum(cases),
+            totDeaths = sum(deaths),
+            ratio = 100 * (totDeaths/totCases)) %&gt;%
+  ungroup() %&gt;%
+  slice_max(ratio, n = 5)</code></pre>
+<pre><code>## # A tibble: 5 x 4
+##   state                totCases totDeaths ratio
+##   &lt;chr&gt;                   &lt;dbl&gt;     &lt;dbl&gt; &lt;dbl&gt;
+## 1 New Jersey            1023200     26444  2.58
+## 2 Massachusetts          709873     17993  2.53
+## 3 New York              2112872     53093  2.51
+## 4 Connecticut            349301      8276  2.37
+## 5 District of Columbia    49347      1141  2.31</code></pre>
+</div>
+<div id="end" class="section level1">
+<h1>END</h1>
 </div>
 
 
